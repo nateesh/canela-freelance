@@ -11,8 +11,8 @@
     </div>  
   </div>
   <div class="flex ml-auto items-center pr-8">
-    <a href="#about" class="py-4 px-2 text-gray-800 font-semibold hover:text-lime-700 transition duration-300">About</a>
-    <a href="#services" class="py-4 px-2 text-gray-800 font-semibold hover:text-lime-700 transition duration-300">Packaged Services</a>
-    <a href="#contact" class="py-4 px-2 text-gray-800 font-semibold hover:text-lime-700 transition duration-300">Contact</a>
+    <a href="#about" class="text-xl py-4 px-2 text-gray-800 font-semibold hover:text-lime-700 transition duration-300">About</a>
+    <a href="#services" class="text-xl py-4 px-2 text-gray-800 font-semibold hover:text-lime-700 transition duration-300">Packaged Services</a>
+    <a href="#contact" class="text-xl py-4 px-2 text-gray-800 font-semibold hover:text-lime-700 transition duration-300">Contact</a>
   </div>
 </div>

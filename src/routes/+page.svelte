@@ -3,6 +3,8 @@
   import Services from "$lib/Services.svelte";
   import Header from "$lib/Header.svelte";
   import ContactForm from "$lib/ContactForm.svelte";
+  import image1 from "$lib/assets/postgres.png";
+  import image2 from "$lib/assets/three-dim-aerial.png";
 </script>
 
 <Header />
@@ -25,7 +27,7 @@ focus:scroll-auto min-h-screen pt-24 p-6">
     <li>Single point of truth</li>
     <li>Versioning</li>
   </ul>
-  <img src="src\lib\assets\postgres.png" alt="PostgreSQL" class="h-36 p-4" />
+  <img src="{image1}" alt="PostgreSQL" class="h-36 p-4" />
   <br />
 
   <h3><b>Visualise in 3D</b>. Make an impact with your data.</h3>
@@ -34,7 +36,7 @@ focus:scroll-auto min-h-screen pt-24 p-6">
     <li>Video animations</li>
     <li>Location specific raster and vector data</li>
   </ul>
-  <img src="src\lib\assets\three-dim-aerial.png" alt="3d-aerial" class="h-72 p-4" />
+  <img src="{image2}" alt="3d-aerial" class="h-72 p-4" />
   <br />
 
   <h3>Analysis.</h3>
