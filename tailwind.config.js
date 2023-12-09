@@ -8,6 +8,7 @@ export default {
         'open-sans': ['Open Sans', 'sans-serif'],
         'lato': ['Lato', 'sans-serif'],
         'serif': ['Georgia'],
+        'palatino': ['Palatino', 'serif'],
         'montserrat': ['Montserrat', 'sans-serif'],
         'fira-code': ['Fira Code', 'monospace'],
         'source-code-pro': ['Source Code Pro', 'monospace'],

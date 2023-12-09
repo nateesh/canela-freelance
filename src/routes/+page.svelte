@@ -1,46 +1,32 @@
 <script>
+
   import About from "$lib/About.svelte";
   import Services from "$lib/Services.svelte";
   import Header from "$lib/Header.svelte";
   import ContactForm from "$lib/ContactForm.svelte";
-  import image1 from "$lib/assets/postgres.png";
-  import image2 from "$lib/assets/three-dim-aerial.png";
+  
+  // images
+
+  import portait from "$lib/assets/portrait.png";
+
 </script>
 
 <Header />
-<div class="container bg-background-secondary mx-auto w-10/12 scroll-smooth 
-focus:scroll-auto min-h-screen pt-24 p-6">
+<div class="container bg-background-secondary mx-auto w-full xl:w-10/12 scroll-smooth
+focus:scroll-auto min-h-screen pt-28 p-6 z-20">
 
-  <p>Hello, I'm Nathan, welcome to my online page.</p>
-  <p>I'm here to help you get the most out of your data.</p>
-  <p>
-    Helping clients in person around SE Queensland, and remotely across
-    Australia in mining/exploration, environment, and Government.
-  </p>
-  
-
-  <h1>Service examples:</h1>
-  
-  <h3><b>Cloud Database</b>. Collaborate with confidence.</h3>
-  <ul>
-    <li>PostgreSQL/PostGIS, SpatiaLite, SQL Server</li>
-    <li>Single point of truth</li>
-    <li>Versioning</li>
-  </ul>
-  <img src="{image1}" alt="PostgreSQL" class="h-36 p-4" />
-  <br />
-
-  <h3><b>Visualise in 3D</b>. Make an impact with your data.</h3>
-  <ul>
-    <li>Vibrant graphics and charts for reports and marketing</li>
-    <li>Video animations</li>
-    <li>Location specific raster and vector data</li>
-  </ul>
-  <img src="{image2}" alt="3d-aerial" class="h-72 p-4" />
-  <br />
-
-  <h3>Analysis.</h3>
-
+  <div class="flex mb-8">
+    <img src="{portait}" alt="portrait" class="h-48 pr-5" />
+    <div class="text-xl font-jetbrains-mono italic">
+      <p class="mb-4">Hi, I'm Nathan, welcome to my online page. <br>
+        I'm here to help you get the most out of your data. <br>
+        Helping clients in person around SE Queensland, and remotely across
+        Australia in <b class="text-lime-700">mining/exploration, environment, and Government.</b></p>
+      <p class="mb-4">I pride myself on providing prompt and diligent service to my customers</p>
+      <br>
+    </div>
+  </div>
+    
   <div class="grid p-6">
     <section id="about">
       <About />
@@ -59,11 +45,4 @@ focus:scroll-auto min-h-screen pt-24 p-6">
     background-color: theme(colors.background);
   }
 
-  /* ul {
-    list-style: none;
-  } */
-
-  ul li:before {
-    content: "✓ ";
-  }
 </style>

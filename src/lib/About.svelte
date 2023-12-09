@@ -1,12 +1,8 @@
 <script>
 </script>
 
-<div class="">
-  <!-- <h1 class="text-3xl bg-lime-600 font-bold underline">Canela</h1> -->
+<div class="text-xl grid xl:grid-cols-2 grid-cols-1">
 
-  <h1>Full list of services</h1>
-
-  <br />
   <h2>GIS and programming services.</h2>
   <li>Spatial analysis.</li>
   <li>Database management (PostgreSQL/PostGIS, SpatiaLite).</li>
@@ -17,4 +13,5 @@
   <li>Web mapping and web development (Javascript).</li>
   <li>VertiGIS Studio and Workflow application development.</li>
   <li>Data visualisation and dashboards</li>
+  
 </div>
