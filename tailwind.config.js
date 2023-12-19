@@ -3,6 +3,13 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      transitionProperty: {
+        'fontSize': 'font-size',
+        'height': 'height',
+      },
+      borderWidth: {
+        '3': '3px',
+      },
       fontFamily: {
         'roboto': ['Roboto', 'sans-serif'],
         'open-sans': ['Open Sans', 'sans-serif'],
@@ -20,6 +27,7 @@ export default {
         'blue': '#02475E',
         'background': '#F5F0BB',
         'background-secondary': '#CCD6A6',
+        'service-card': '#94A684',
       },
     },
   },

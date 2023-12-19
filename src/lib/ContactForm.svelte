@@ -1,47 +1,23 @@
-<div class="">
-  <h3>Let's Talk!</h3>
-  <h2>
-    I usually respond to enquires on the same day.
-  </h2>
-  <form>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Your name.." />
+<script lang="ts">
+</script> 
 
-    <label for="email">Email</label>
-    <input type="text" id="email" name="email" placeholder="Your email.." />
+<h2 class="section-header">Contact Me</h2>
+<p class="mb-8"></p>
+<div class="grid lg:grid-cols-2 grid-cols-1 gap-8 text-gray-800">
+  <div class="sm:text-2xl text-xl space-y-4">
+    <p>Lets Chat!</p>
+    <p>Be it about a potential work, or just for some advice.</p>
+    <p>It is my mission to provide a prompt, and diligent 
+      service for your next project.</p>
+    <p>Please provide some basic details and I'll get back to ASAP.</p>
+    <p>Current Respone Time: <span class="text-xl font-bold font-mono text-lime-900/70 italic">Usually same day</span></p>
 
-    <label for="company">Company</label>
-    <input
-      type="text"
-      id="company"
-      name="company"
-      placeholder="Your company name.."
-    />
-
-    <br /><br />
-    <h3>I'm Interested in:</h3>
-    <input type="checkbox" id="freelance" name="freelance" value="freelance" />
-    <label for="freelance">Freelance/contract services</label><br />
-    <input
-      type="checkbox"
-      id="employment"
-      name="employment"
-      value="employment"
-    />
-    <label for="employment">Discussing other employment opportunity</label><br
-    />
-    <input type="checkbox" id="other" name="other" value="other" />
-    <label for="other">Something else 🤔</label><br />
-    <input type="submit" value="Submit" />
-
-    <label for="subject">Subject</label>
-    <textarea
-      id="subject"
-      name="subject"
-      placeholder="Write something.."
-      style="height:200px"
-    />
-
-    <button>Submit</button>
-  </form>
+  </div>
+  <div>
+    <slot></slot>
+  </div>
 </div>
+
+<style lang="postcss">
+  
+</style>
