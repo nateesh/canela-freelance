@@ -146,7 +146,6 @@ focus:scroll-auto min-h-screen pt-24 sm:pt-32 p-4 sm:p-9 z-20">
     @apply 
 z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic text-lime-700 border-b-3 border-lime-800/20 pt-8 pb-5 mb-6 uppercase bg-lime-800/10  }
   :global(.green-bold) {
-      @apply text-lime-700
-      font-bold;
+      @apply text-lime-700 font-bold;
   }
 </style>
