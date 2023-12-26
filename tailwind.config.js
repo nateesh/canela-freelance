@@ -28,7 +28,7 @@ export default {
         'jetbrains-mono': ['JetBrains Mono', 'monospace'],
       },
       colors: {
-        'blue': '#38403E',
+        'blue': '#02475E',
         // 'background': '#48656c',
         'background': '#F5F0BB',
         'background-secondary': '#CCD6A6',

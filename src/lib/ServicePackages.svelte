@@ -7,6 +7,7 @@
   // images
   import imageDatabase from "$lib/assets/database.png";
   import imageAnalysis from "$lib/assets/analysis.png";
+  import imageInfrastructure from "$lib/assets/infrastructure-validation.png";
   import image2 from "$lib/assets/three-dim-aerial.png";
 
   const customStyles =
@@ -18,7 +19,7 @@
   <div>
     <ServiceCard
       className={customStyles}
-      title="<b>Cloud Database.</b><br>Collaborate with confidence."
+      title="<b class='text-2xl'>Cloud Database.</b><br>Collaborate with confidence."
       list={[
         "A single point of truth for team collaboration.",
         "Integrate with workflows and GIS Software.",
@@ -32,7 +33,7 @@
   <div>
     <ServiceCard
       className={customStyles}
-      title="<b>Visualise in 3D</b>.<br><span>Make an impact."
+      title="<b class='text-2xl'>Visualise in 3D</b>.<br><span>Make an impact."
       list={[
         "Vibrant graphics for reports and marketing.",
         "Video animations.",
@@ -59,13 +60,13 @@
   <div>
     <ServiceCard
       className={customStyles}
-      title="<b>Data Validation.</b>"
+      title="<b class='text-2xl'>Data Validation.</b>"
       list={[
         "Automate data validation and reporting.",
         "Integrity checks across spatial and tabular features.",
         "Validate the itegrity of existing data",
       ]}
-      imageSrc={image2}
+      imageSrc={imageInfrastructure}
       imageCaption="3D aerial"
       imageClass="border-1"
     />
@@ -73,7 +74,7 @@
   <div>
     <ServiceCard
       className={customStyles}
-      title="<b>GIS Analysis.</b>"
+      title="<b class='text-2xl'>GIS Analysis.</b>"
       list={[
         "Harness the power of GIS to gain valuable spatial insights",
         "Spatial analysis and modelling.",
