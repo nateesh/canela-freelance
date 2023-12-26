@@ -57,14 +57,18 @@ export const actions = {
         Message: ${form.data.message}`,
       };
   
-      transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
+      await new Promise((resolve, reject) => {
+        transporter.sendMail(mailOptions, function(error, info){
+          if (error) {
+            console.log(error);
+            reject(error);
+          } else {
+            console.log('Email sent: ' + info.response);
+            resolve(info);
+          }
+        });
       });
-  
+      
       return { form }
     }
   }
