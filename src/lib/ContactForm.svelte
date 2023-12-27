@@ -21,7 +21,7 @@
     <p>It is my mission to provide a prompt, and diligent service for your next project.</p>
     <p>Lets Chat!</p>
     <p>Feel free to pre-fill the form with an option below. "<span class="italic">I'd like to discuss...</span>"</p>
-    <div class="lg:flex lg:flex-col lg:justify-start text-lg space-y-3 items-start ml-2">
+    <div class=" text-lg space-y-3 items-start ml-2">
       <button class="border-1 border-gray-800/40 bg-lime-100 hover:bg-lime-200/50 transition duration-300 rounded-xl px-4 py-2" 
       on:click="{() => updateFormMessage("Please give me a call-back.")}">A call-back</button>
       <button class="border-1 border-gray-800/40 bg-lime-100 hover:bg-lime-200/50 transition duration-300 rounded-xl px-4 py-2" 

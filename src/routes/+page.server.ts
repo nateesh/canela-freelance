@@ -1,12 +1,12 @@
 import { fail, type RequestEvent } from "@sveltejs/kit"
 import { z } from "zod"
-import { superValidate } from "sveltekit-superforms/server"
+import { message, superValidate } from "sveltekit-superforms/server"
 import nodemailer from 'nodemailer';
+
 // add vercel env variables
 import * as dotenv from 'dotenv';
 dotenv.config({ path: '.env.local' });
 const ventraPass = process.env.VENTRA_PASS;
-
 
 let transporter = nodemailer.createTransport({
 	host: 'ventraip.email',
@@ -68,6 +68,8 @@ export const actions = {
           }
         });
       });
+
+      return message(form, 'Your message has been sent!')
       
       return { form }
     }

@@ -1,7 +1,8 @@
 <script lang="ts">
-  import { createEventDispatcher } from 'svelte';
+  import { onDestroy, tick } from 'svelte';
   import { isMobileMenuOpen } from '../store.js';
   import { formMessage } from '../store.js';
+  import { fade } from 'svelte/transition';  
 
   import About from "$lib/About.svelte";
   import Services from "$lib/Services.svelte";
@@ -27,16 +28,17 @@
 		message: z.string().min(1),
 	})
 
-  const { form, errors, enhance, constraints } = superForm((data as { form: any }).form, {
+  const { form, message, errors, enhance, constraints } = superForm((data as { form: any }).form, {
 		taintedMessage: "Are you sure you want leave?",
-		validators: newContactSchema
+		validators: newContactSchema,
+    resetForm: true,
 	})
 
 
-  // $form.message = "hello";
   $: {
     $form.message = $formMessage;
   }
+
 
  
   // Nav Menu Toggle
@@ -48,6 +50,20 @@
     isMobileMenuOpen.update(value => !value);
   }
 
+  let timeoutId: number | undefined;
+  
+  $: if ($message) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(async () => {
+      $message = null;
+      await tick(); // Wait for the state to be updated
+    }, 3000); // 5 seconds
+  }
+
+  onDestroy(() => {
+    clearTimeout(timeoutId);
+  });
+  
 </script>
 
 <!-- <SuperDebug data={$form} /> -->
@@ -78,59 +94,64 @@ focus:scroll-auto min-h-screen pt-24 sm:pt-32 p-4 sm:p-9 z-20">
     <section class="-mt-20 pt-20 sm:pt-32 sm:-mt-32" id="contact">
       <h2 class="z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic text-lime-700 border-b-3 border-lime-800/20 pt-8 pb-5 mb-6 uppercase bg-lime-800/10 header-bg-displaced mt-6">Contact Me</h2>
       <ContactForm>
-      <article>
-        <form method="POST" use:enhance>
-            <div class="flex flex-col">
-            <label class="text-md mb-2" for="name">First name</label>
-            <input class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
-            rounded-md p-2 focus:outline-none focus:ring-2 w-3/5" type="text" id="name" name="name" 
-            bind:value={$form.name} />
+        <article>
+          <form method="POST" use:enhance>
+            <div class="flex flex-col lg:columns-2">
+              <label class="text-md mb-2" for="name">First name</label>
+              <input class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
+              rounded-md p-2 focus:outline-none focus:ring-2 lg:w-3/5 w-full" type="text" id="name" name="name" 
+              bind:value={$form.name} />
 
-            {#if $errors.name}
-              <!-- <small>{$errors.name}</small> -->
-              <small>Please add your name.</small>
-            {/if}
+              {#if $errors.name}
+                <!-- <small>{$errors.name}</small> -->
+                <small>Please add your name.</small>
+              {/if}
 
-            <label class="text-md mb-2 mt-5" for="phone">Phone/Mobile</label>
-            <input class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
-            rounded-md p-2 focus:outline-none focus:ring-2 w-3/5" type="text" id="phone" name="phone" 
-            bind:value={$form.phone} />
+              <label class="text-md mb-1 mt-3" for="phone">Phone/Mobile</label>
+              <input class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
+              rounded-md p-2 focus:outline-none focus:ring-2 lg:w-3/5 w-full" type="text" id="phone" name="phone" 
+              bind:value={$form.phone} />
 
-            {#if $errors.phone}
-              <small>{$errors.phone}</small>
-            {/if}
+              {#if $errors.phone}
+                <small>{$errors.phone}</small>
+              {/if}
 
-            <label class="text-md mb-2 mt-5" for="email">Email address</label>
-            <input class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
-            rounded-md p-2 focus:outline-none focus:ring-2 w-3/5" type="email" id="email" name="email" 
-            bind:value={$form.email} />
+              <label class="text-md mb-1 mt-3" for="email">Email address</label>
+              <input class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
+              rounded-md p-2 focus:outline-none focus:ring-2 lg:w-3/5 w-full" type="email" id="email" name="email" 
+              bind:value={$form.email} />
 
-            {#if $errors.email}
-              <small>{$errors.email}</small>
-            {/if}
+              {#if $errors.email}
+                <small>{$errors.email}</small>
+              {/if}
 
-            <label class="text-md mb-2 mt-5" for="company">Company</label>
-            <input class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
-            rounded-md p-2 focus:outline-none focus:ring-2 w-3/5" type="text" id="company" name="company" 
-            bind:value={$form.company} />
+              <label class="text-md mb-1 mt-3" for="company">Company</label>
+              <input class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
+              rounded-md p-2 focus:outline-none focus:ring-2 lg:w-3/5 w-full" type="text" id="company" name="company" 
+              bind:value={$form.company} />
 
-            {#if $errors.company}
-            <small>{$errors.company}</small>
-            {/if}
-            
-            <label class="text-md mb-2 mt-5" for="message">Message</label>
-            <textarea class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
-            rounded-md p-2 focus:outline-none focus:ring-2 h-40" id="message" name="message" placeholder="Write something.." 
-            bind:value={$form.message} />
+              {#if $errors.company}
+              <small>{$errors.company}</small>
+              {/if}
+              
+              <label class="text-md mb-1 mt-3" for="message">Message</label>
+              <textarea class="border hover:border-sky-800/70 hover:bg-slate-50 transition duration-300 border-gray-400 
+              rounded-md p-2 focus:outline-none focus:ring-2 lg:h-20 h-28" id="message" name="message" placeholder="Write something.." 
+              bind:value={$form.message} />
 
-            {#if $errors.message}
-            <small>Please add a message.</small>
-            {/if}
-
-            <button class="border-gray-400 hover:bg-slate-600/20 bg-slate-600/40 rounded-md py-5 mt-5 text-xl" type="submit">Send</button>
-          </div>
+              {#if $errors.message}
+              <small>Please add a message.</small>
+              {/if}
+              {#if !$message}
+              <button class="border-gray-400 hover:bg-slate-600/20 bg-slate-600/40 rounded-md py-5 mt-5 text-xl" type="submit">Send</button>
+              {:else}
+                <div transition:fade={{duration: 300}} class="bg-lime-600/70 text-white text-center rounded-md text-xl mb-4 py-5 mt-5">
+                  <p>{$message}</p>
+                </div>
+              {/if}
+            </div>
           </form>
-      </article>
+        </article>
       </ContactForm>
     </section>
   </div>
@@ -143,8 +164,7 @@ focus:scroll-auto min-h-screen pt-24 sm:pt-32 p-4 sm:p-9 z-20">
     background-color: theme(colors.background);
   }
   :global(.section-header) {
-    @apply 
-z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic text-lime-700 border-b-3 border-lime-800/20 pt-8 pb-5 mb-6 uppercase bg-lime-800/10  }
+    @apply z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic text-lime-700 border-b-3 border-lime-800/20 pt-8 pb-5 mb-6 uppercase bg-lime-800/10  }
   :global(.green-bold) {
       @apply text-lime-700 font-bold;
   }
