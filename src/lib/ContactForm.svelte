@@ -17,7 +17,7 @@
 
 <p class="mb-8"></p>
 <div class="grid lg:grid-cols-2 grid-cols-1 gap-8 text-gray-800">
-  <div class="sm:text-2xl text-xl space-y-6">
+  <div class="sm:text-xl text-xl space-y-6">
     <p>It is my mission to provide a prompt, and diligent service for your next project.</p>
     <p>Lets Chat!</p>
     <p>Feel free to pre-fill the form with an option below. "<span class="italic">I'd like to discuss...</span>"</p>

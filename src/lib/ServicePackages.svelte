@@ -15,7 +15,7 @@
     border-r-lime-700/30 border-lime-700/10 py-8 h-full items-stretch";`
 </script>
 
-<div class="grid lg:grid-cols-2 grid-cols-1 round mt-6 gap-6">
+<div class="grid lg:grid-cols-2 bg-c_ grid-cols-1 round mt-6 gap-6">
   <div>
     <ServiceCard
       className={customStyles}

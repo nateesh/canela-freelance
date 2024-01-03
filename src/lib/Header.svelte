@@ -23,14 +23,14 @@
 
 <svelte:window bind:innerWidth />
 
-<div class="{`${scrolled ? 'bg-background/80' : 'bg-background'} flex scroll w-screen fixed z-50`}">
-  <div class="flex items-center sm:pl-8">
+<div class="{`${scrolled ? 'bg-background/95' : 'bg-background'} flex scroll w-screen fixed z-50`}">
+  <div class="flex items-center sm:pl-8 bg-c_">
     <a href="#about">
       <img src={Logo} alt="Canela Logo" class={`${scrolled ? 'h-16 sm:h-20' : 'h-16 sm:h-24'} p-4 transition-height duration-300`} />
     </a>
     <a href="#about">
       <div class="pl-1">
-        <p class="{`${scrolled ? 'text-3xl sm:text-3xl' : 'text-3xl sm:text-4xl'} transition-fontSize duration-300 font-bold italic font-serif text-blue ml-3`}">
+        <p class="{`${scrolled ? 'text-3xl sm:text-3xl' : 'text-3xl sm:text-4xl'} transition-fontSize duration-300 font-bold italic font-serif text-logo ml-3`}">
         Canela Spatial</p>
         <p class="{`${scrolled ? 'text-sm sm:text-md' : 'text-sm sm:text-lg'} transition-fontSize duration-300 font-jetbrains-mono font-bold text-gray-800 ml-8`}">
         GIS - DATA - PROGRAMMING 

@@ -84,15 +84,18 @@ focus:scroll-auto min-h-screen pt-24 sm:pt-32 p-4 sm:p-9 z-20">
       <About />
     </section>
     <section class="-mt-20 pt-20 sm:pt-32 sm:-mt-32" id="service-packages">
-      <h2 class="z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic text-lime-700 border-b-3 border-lime-800/20 pt-8 pb-5 mb-6 uppercase bg-lime-800/10 header-bg">Service Highlights</h2>  
+      <h2 class="z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic font-bold text-logo border-b-3 
+      border-lime-800/20 pt-8 pb-5 mb-6 bg-header header-bg">Service Highlights</h2>  
       <ServicePackages />
     </section>
     <section class="-mt-20 pt-20 sm:pt-32 sm:-mt-32" id="services">
-      <h2 class="z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic text-lime-700 border-b-3 border-lime-800/20 pt-8 pb-5 mb-6 uppercase bg-lime-800/10 header-bg mt-6">More Services</h2>
+      <h2 class="z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic font-bold text-logo border-b-3 
+      border-lime-800/20 pt-8 pb-5 mb-6 bg-header header-bg mt-6">More Services</h2>
       <Services />
     </section>
     <section class="-mt-20 pt-20 sm:pt-32 sm:-mt-32" id="contact">
-      <h2 class="z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic text-lime-700 border-b-3 border-lime-800/20 pt-8 pb-5 mb-6 uppercase bg-lime-800/10 header-bg-displaced mt-6">Contact Me</h2>
+      <h2 class="z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic font-bold text-logo border-b-3 
+      border-lime-800/20 pt-8 pb-5 mb-6 bg-header header-bg-displaced mt-6">Contact Me</h2>
       <ContactForm>
         <article>
           <form method="POST" use:enhance>
@@ -162,9 +165,8 @@ focus:scroll-auto min-h-screen pt-24 sm:pt-32 p-4 sm:p-9 z-20">
 <style lang="postcss">
   :global(html) {
     background-color: theme(colors.background);
+    /* @apply bg-c_;	 */
   }
-  :global(.section-header) {
-    @apply z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic text-lime-700 border-b-3 border-lime-800/20 pt-8 pb-5 mb-6 uppercase bg-lime-800/10  }
   :global(.green-bold) {
       @apply text-lime-700 font-bold;
   }
