@@ -13,8 +13,8 @@
       <li><span class="green-bold">Database management</span> (PostgreSQL, SpatiaLite).</li>
       <li><span class="green-bold">Enterprise</span> GIS Training - ArcGIS.</li>
       <li><span class="green-bold">Open-source</span> GIS Training - QGIS.</li>
-      <li>Custom <span class="green-bold">Geo-spatial scripting</span> (Python).</li>
-      <li><span class="green-bold">Web mapping</span> and web development (Javascript).</li>
+      <li>Custom <span class="green-bold">Geo-spatial programming</span> (Python).</li>
+      <li><span class="green-bold">Web mapping</span> and web development.</li>
       <li><span class="green-bold">VertiGIS Studio</span> and Workflow application development.</li>
       <li>Data visualisation and <span class="green-bold">dashboards</span></li>
       <li>Data processing, <span class="green-bold">automation</span>, Supervised machine-learning.</li>
