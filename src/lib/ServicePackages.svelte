@@ -47,7 +47,7 @@
 
   <div class="flex-none lg:flex lg:col-span-2 p-8 {customStyles}">
     <div class="xl:w-72 lg:w-5/12 w-full pr-5 pb-5">
-      <h3 class="text-xl font-bold mb-3">Web Development + Mapping.</h3>
+      <h3 class="text-2xl font-sans text-zinc-700/80 mb-3 font-bold">Web Development + Mapping.</h3>
       <ul class="text-lg service-card">
         <li class="mb-2">Interactive web-mapping apps.</li>
         <li class="mb-2">Mobile friendly websites.</li>

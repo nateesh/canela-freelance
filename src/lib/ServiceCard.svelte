@@ -9,7 +9,7 @@
 
 <div class="{className} xl:flex md:max-lg:flex no-flex md:justify-between p-8">
     <div class="pr-4">
-        <h3 class="text-lg mb-3">{@html title}</h3>
+        <h3 class="text-lg font-sans text-zinc-700/80 mb-3">{@html title}</h3>
         <ul class="">
             {#each list as item, index (index)}
                 <li class="text-lg mb-2">{item}</li>
