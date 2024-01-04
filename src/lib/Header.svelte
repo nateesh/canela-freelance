@@ -26,7 +26,7 @@
 <div class="{`${scrolled ? 'bg-background/95' : 'bg-background'} flex scroll w-screen fixed z-50`}">
   <div class="flex items-center sm:pl-8 bg-c_">
     <a href="#about">
-      <img src={Logo} alt="Canela Logo" class={`${scrolled ? 'h-16 sm:h-20' : 'h-16 sm:h-24'} p-4 transition-height duration-300`} />
+      <img src={Logo} alt="Canela Logo" class={`${scrolled ? 'h-16 sm:h-18' : 'h-16 sm:h-24'} p-4 transition-height duration-300`} />
     </a>
     <a href="#about">
       <div class="pl-1">

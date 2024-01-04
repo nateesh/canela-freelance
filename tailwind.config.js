@@ -3,6 +3,9 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      height: {
+        '18': '4.5rem', // 1rem = 16px, so 4.5rem = 72px
+      },
       screens: {
         'xs': '480px',
       },
