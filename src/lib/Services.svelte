@@ -9,15 +9,16 @@
 
   <div class="mb-10 pl-3">
     <ul class="service-list list-none text-lg grid xs:grid-cols-2 grid-cols-1 gap-3 whitespace-pre-wrap">
-      <li>Vector and raster <span class="green-bold">Spatial analysis.</span></li>
-      <li><span class="green-bold">Database management</span> (PostgreSQL, SpatiaLite).</li>
-      <li><span class="green-bold">Enterprise</span> GIS Training - ArcGIS.</li>
-      <li><span class="green-bold">Open-source</span> GIS Training - QGIS.</li>
-      <li>Custom <span class="green-bold">Geo-spatial programming</span> (Python).</li>
-      <li><span class="green-bold">Web mapping</span> and web development.</li>
-      <li><span class="green-bold">VertiGIS Studio</span> and Workflow application development.</li>
-      <li>Data visualisation and <span class="green-bold">dashboards</span></li>
-      <li>Data processing, <span class="green-bold">automation</span>, Supervised machine-learning.</li>
+      <li>Vector and raster <span class="text-lime-700/70">Spatial analysis.</span></li>
+      <li><span class="text-lime-700/70">Database management</span> (PostgreSQL, SpatiaLite).</li>
+      <li><span class="text-lime-700/70">Enterprise</span> GIS Training - ArcGIS.</li>
+      <li><span class="text-lime-700/70">Open-source</span> GIS Training - QGIS.</li>
+      <li>Custom <span class="text-lime-700/70">Geo-spatial programming</span> (Python).</li>
+      <li><span class="text-lime-700/70">Web mapping</span> and web development.</li>
+      <li><span class="text-lime-700/70">VertiGIS Studio</span> and Workflow application development.</li>
+      <li>Data visualisation and <span class="text-lime-700/70">dashboards</span></li>
+      <li>Data processing, <span class="text-lime-700/70">automation</span>, Supervised machine-learning.</li>
+      <li>CAD software Drafting (AutoCAD)</li>
     </ul>
   </div>
 </div>
@@ -31,8 +32,5 @@
   .service-list li:before {
     content: "✓ ";
     margin-right: 0.5em;
-  }
-  .green-bold {
-    @apply text-lime-700/70;
   }
 </style>
