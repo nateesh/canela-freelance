@@ -5,7 +5,7 @@
 
 <div class="mb-8">
   <div class="text-xl font-jetbrains-mono italic leading-10 space-y-4">
-    <img src={portait} alt="portrait" class="h-48 mb-5 px-5 xs:float-right" />
+    <!-- <img src={portait} alt="portrait" class="h-48 mb-5 px-5 xs:float-right" /> -->
 
     <!-- <p>Hi, I'm Nathan, welcome to my online page.</p> -->
 
