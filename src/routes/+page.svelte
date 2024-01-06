@@ -70,7 +70,7 @@
 
 <Header />
 <div class="container bg-background-secondary mx-auto w-full xl:w-10/12 scroll-smooth
-focus:scroll-auto min-h-screen pt-24 sm:pt-32 p-4 sm:p-9 z-20">
+focus:scroll-auto min-h-screen pt-20 sm:pt-32 p-4 sm:p-9 z-20">
 <div class="{`${$isMobileMenuOpen ? 'fixed text-center space-y-8 inset-0 bg-background/80 text-2xl z-10 pt-20' : 'hidden'} `}">
   <a href="#about" class="block py-8 px-2 text-gray-800 font-semibold uppercase bg-background-secondary
     hover:text-lime-700 hover:border-b-2 border-gray-700 transition duration-300" on:click={toggleMenu}>About</a>
@@ -80,17 +80,17 @@ focus:scroll-auto min-h-screen pt-24 sm:pt-32 p-4 sm:p-9 z-20">
     hover:text-lime-700 hover:border-b-2 border-gray-700 transition duration-300" on:click={toggleMenu}>Contact</a>
 </div>
   <div>
-    <section class="-mt-20 pt-20 sm:pt-32 sm:-mt-32" id="about">
+    <section class="-mt-20 pt-20 sm:pt-28 sm:-mt-28" id="about">
       <About />
     </section>
-    <section class="-mt-20 pt-20 sm:pt-32 sm:-mt-32" id="service-packages">
+    <section class="-mt-20 pt-20 sm:pt-32 sm:-mt-32 pb-20" id="service-packages">
       <h2 class="z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic font-bold text-logo border-b-3 
       border-lime-800/20 pt-8 pb-5 mb-6 bg-header header-bg">Service Highlights</h2>  
       <ServicePackages />
     </section>
-    <section class="-mt-20 pt-20 sm:pt-32 sm:-mt-32" id="services">
+    <section class="-mt-20 pt-20 sm:pt-18 sm:-mt-18" id="services">
       <h2 class="z-20 text-3xl font-mono sm:text-left text-center sm:pl-12 pl-5 italic font-bold text-logo border-b-3 
-      border-lime-800/20 pt-8 pb-5 mb-6 bg-header header-bg mt-6">More Services</h2>
+      border-lime-800/20 pt-6 pb-5 mb-6 bg-header header-bg mt-6">More Services</h2>
       <Services />
     </section>
     <section class="-mt-20 pt-20 sm:pt-32 sm:-mt-32" id="contact">
