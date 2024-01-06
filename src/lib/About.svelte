@@ -1,14 +1,11 @@
 <script>
   // images
   import portait from "$lib/assets/portrait.png";
+// <!-- <img src={portait} alt="portrait" class="h-48 mb-5 px-5 xs:float-right" /> -->
 </script>
 
 <div class="mb-8">
   <div class="text-xl font-jetbrains-mono italic leading-10 space-y-4">
-    <!-- <img src={portait} alt="portrait" class="h-48 mb-5 px-5 xs:float-right" /> -->
-
-    <!-- <p>Hi, I'm Nathan, welcome to my online page.</p> -->
-
     <p>It is my mission to bring your organisation <span class="green-bold">cost competitive, prompt and diligent</span> 
       GIS and IT <a href="#services" class="text-sky-600/70 hover:text-sky-700/50 underline">services</a>.</p>
     <p>I help clients in SE Queensland, and remotely across Australia in industries like
